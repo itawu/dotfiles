@@ -1,0 +1,38 @@
+{
+    "stacktrace": {
+        "prefix": "st",
+        "body": [
+            "StackTraceElement[] stack = new Throwable().getStackTrace();",
+            "for (StackTraceElement stackTraceElement : stack) {",
+            "    Slog.e(TAG, \"test: ----> \" + stackTraceElement.toString());",
+            "}"
+        ],
+        "description": "stacktrace"
+    },
+    "sys": {
+        "prefix": "sys",
+        "body": ["System.out.println(\"test:$0\");"],
+        "description": "sys"
+    },
+    "slog": {
+        "prefix": "sl",
+        "body": ["Slog.e(TAG, \"test:$0\");"],
+        "description": "slog"
+    },
+    "slog": {
+        "prefix": "sl",
+        "body": ["android.util.Slog.e(\"test\", \"test:$0\");"],
+        "description": "slog"
+    },
+    "dpc": {
+        "prefix": "dpc",
+        "body": ["Slog.e(mTag, \"test:$0\");"],
+        "description": "slog"
+    },
+    "thr": {
+        "prefix": "thr",
+        "body": ["Thread.dumpStack();"],
+        "description": "thr"
+    }
+}
+
